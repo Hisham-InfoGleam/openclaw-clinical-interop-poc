@@ -1,0 +1,25 @@
+# Private documentation (ALWAYS ignore)
+docs/
+articles/
+notes/
+*.secret.md
+*.private.md
+*.local.md
+INTERNAL-*.md
+*-INTERNAL.md
+*-PRIVATE.md
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+secrets/
+
+# Node.js artifacts
+node_modules/
+dist/
+coverage/
+.tsbuildinfo
+
+# Prisma
+automation-api/prisma/migrations/
