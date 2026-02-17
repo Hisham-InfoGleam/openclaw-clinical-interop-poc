@@ -22,37 +22,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-import { Router } from "express";
-import { z } from "zod";
-import prisma from "../db/prismaClient";
+import { PrismaClient } from "@prisma/client";
 
-const querySchema = z.object({
-  limit: z.coerce.number().int().min(1).max(100).default(20)
-});
+const prisma = new PrismaClient();
 
-export const automationsRouter = Router();
-
-automationsRouter.get("/api/v1/automations", async (req, res, next) => {
-  const parsed = querySchema.safeParse(req.query);
-
-  if (!parsed.success) {
-    return res.status(400).json({ error: "Invalid query parameters." });
-  }
-
-  const { limit } = parsed.data;
-
-  try {
-    const items = await prisma.automation.findMany({
-      orderBy: { createdAt: "desc" },
-      take: limit
-    });
-
-    return res.json({
-      correlationId: res.locals.correlationId,
-      items,
-      limit
-    });
-  } catch (error) {
-    return next(error);
-  }
-});
+export default prisma;
