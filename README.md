@@ -70,8 +70,13 @@ Publish-safe placeholders used in this repo:
 - Execution audit persistence and traceable run history.
 - Expanded integration tests for routing and failure paths.
 
-## Author
-Hisham Hussein Alrashdan
+## 👨‍💻 Author
+
+**InfoGleam Systems**  
+*Hisham Hussein Alrashdan*
+For questions or consulting inquiries, contact: hisham@infogleam.com
+
+www.infoGleam.com
 
 ## License
 MIT License
