@@ -73,7 +73,7 @@ Publish-safe placeholders used in this repo:
 ## 👨‍💻 Author
 
 **InfoGleam Systems**  
-*Hisham Hussein Alrashdan*
+*Hisham Alrashdan*
 For questions or consulting inquiries, contact: hisham@infogleam.com
 
 www.infoGleam.com
